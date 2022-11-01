@@ -4,7 +4,7 @@ public class DiaryEntry {
   private Meal First;
 	private Meal Second;
 	private Meal Third;
-	public Date Date;
+	public Day Date;
 	private Food snack;
 	public int waterQty;
 	
@@ -17,6 +17,6 @@ public class DiaryEntry {
 		
 	}
 	public Meal getMeal(int meal) {
-		
+		return null;
 	}
 }
