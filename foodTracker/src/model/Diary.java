@@ -1,12 +1,12 @@
 package model;
 
 import java.util.List;
+import java.util.Date;
 
 public class Diary {
-	private List<Day> days;
+	private List<DiaryEntry> entries;
 	
-	
-	private Day getDay(String date) {
-		return null;
+	public void getEntry() {
+		DiaryEntry.getDay(DiaryEntry.Date);
 	}
 }
