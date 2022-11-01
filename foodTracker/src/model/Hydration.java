@@ -4,6 +4,6 @@ public class Hydration {
 	private int water;
 	
 	private void addWater(int oz) {
-		
+		water += oz;
 	}
 }
