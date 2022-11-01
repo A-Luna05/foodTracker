@@ -17,6 +17,7 @@ public class DiaryEntry {
 		
 	}
 	public Meal getMeal(int meal) {
+		Meal.computeTotals();
 		return null;
 	}
 }
