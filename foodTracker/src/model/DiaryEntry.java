@@ -4,16 +4,17 @@ public class DiaryEntry {
   private Meal First;
 	private Meal Second;
 	private Meal Third;
-	public Day Date;
-	private Food snack;
+	private Day Date;
+	private Meal snack;
 	public int waterQty;
 	
 	private List<Day> days;
 	
-	private Day getDay(String date) {
+	public Day getDay(String date) {
 		return null;
 	}
-	public void update() {
+	//1 = First, 2 = Second, 3 = Third, 4 = Snack
+	public void update(int meal) {
 		
 	}
 	public Meal getMeal(int meal) {
