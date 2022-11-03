@@ -12,7 +12,7 @@ public class Food {
 	
 	/*basic constructor, worth considering chaining a second constructor to make brand an optional variable*/
 	
-	private Food(String name, String brand, int calories, int carbs, int fats, int protein) {
+	public Food(String name, String brand, int calories, int carbs, int fats, int protein) {
 		this.name = name;
 		this.brand = brand;
 		this.calories = calories;
