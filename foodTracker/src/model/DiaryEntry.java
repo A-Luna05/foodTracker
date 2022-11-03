@@ -28,6 +28,11 @@ public class DiaryEntry {
 			snack.add(fooditem)
 			}
 	}
+	
+	public void updateWater(int water) {
+		Water.add(waterQty);
+	}
+	
 	public Meal getMeal(int meal) {
 		Meal.computeTotals();
 		return null;
