@@ -6,7 +6,6 @@ import java.util.List;
 public class Meal {
 	
 	private int time;
-	private String type;
 	private List<Food> foodList; 
 	private int mealCalories;
 	private int mealFats;
@@ -15,27 +14,25 @@ public class Meal {
 	
 	/*It's possible to not have to pass foodList as an argument, but at this stage I'm not sure*/
 	
-	public Meal(int time, String type, List<Food> foodList) {
-		ArrayList<Integer> mealTotals 	= computeTotals(this);
+	public Meal(int time, List<Food> foodList) {
 		this.time 						= time;
-		this.type 						= type;
 		this.foodList 					= foodList;
-		this.mealCalories 				= mealTotals.get(0);
-		this.mealFats					= mealTotals.get(1);
-		this.mealCarbs					= mealTotals.get(2);
-		this.mealProtein				= mealTotals.get(3);
+		this.mealCalories 				= 0;
+		this.mealFats					= 0;
+		this.mealCarbs					= 0;
+		this.mealProtein				= 0;
 	}
 	
 	/*This method allows us to compute all the totals in one function, but */
 	
-	private ArrayList<Integer> computeTotals(Meal meal) {
+	public ArrayList<Integer> computeTotals() {
 		ArrayList<Integer> mealTotals = new ArrayList<Integer>();
 		int mealCalories 	= 0;
 		int mealFats 		= 0;
 		int mealCarbs 		= 0;
 		int mealProtein 	= 0;
 		
-		for (Food food : meal.foodList) {
+		for (Food food : this.foodList) {
 			mealCalories = 	mealCalories + food.calories;
 			mealFats = 		mealFats + food.fats;
 			mealCarbs = 	mealCarbs + food.carbs;
@@ -51,10 +48,10 @@ public class Meal {
 	}
 	
 	
-	private void addFood(Meal meal, Food food) 
-		{meal.foodList.add(food);}
+	public void addFood(Food food) 
+		{this.foodList.add(food);}
 	
 	
-	private void removeFood(Meal meal, Food food) 
-		{meal.foodList.remove(food);}
+	public void removeFood(Food food) 
+		{this.foodList.remove(food);}
 }
