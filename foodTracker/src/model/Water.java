@@ -5,5 +5,6 @@ public class Water {
 	
 	public void addWater(int oz) {
 		water += oz;
-	}
+		DiaryEntry.updateWater(water);
+	}	
 }
