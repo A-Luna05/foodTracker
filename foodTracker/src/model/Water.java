@@ -1,6 +1,6 @@
 package model;
 
-public class Hydration {
+public class Water {
 	public int water;
 	
 	public void addWater(int oz) {
